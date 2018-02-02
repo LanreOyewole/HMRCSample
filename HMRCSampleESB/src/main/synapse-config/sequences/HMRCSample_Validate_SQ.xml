@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="HMRCSample_Validate_SQ" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full">
+        <property name="HMRCSample_Validate_SQ_LOG___________________________####" value="1111"/>
+    </log>
+    <validate>
+        <schema key="conf:/HMRCSample/xsd/HMRCSample.xsd"/>
+        <on-fail>
+            <log category="ERROR" level="full">
+                <property name="HMRCSample_Input_SQ_LOG___________________________####" value="1111"/>
+            </log>
+        </on-fail>
+    </validate>
+    <xslt key="conf:/HMRCSample/xsl/HMRCSample.xsl">
+        <property expression="$ctx:City" name="City" xmlns:ns="http://org.apache.synapse/xsd"/>
+    </xslt>
+    <log level="full">
+        <property name="HMRCSample_Validate_SQ_LOG___________________________####" value="2222"/>
+    </log>
+</sequence>

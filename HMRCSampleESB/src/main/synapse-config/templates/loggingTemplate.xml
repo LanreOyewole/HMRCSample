@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="loggingTemplate" xmlns="http://ws.apache.org/ns/synapse">
+  <parameter name="correlationId"/>
+  <parameter name="service"/>
+  <parameter name="sequence"/>
+  <sequence>
+    <property
+      expression="fn:concat('{ ', '&quot;correlationId&quot;:&quot;', $func:correlationId, '&quot;, ', '&quot;service&quot;:&quot;', $func:service, '&quot;, ', '&quot;sequence&quot;:&quot;', $func:sequence, '&quot;', ' }')"
+      name="inTrace" scope="default" type="STRING"/>
+    <log level="custom">
+      <property expression="$ctx:inTrace" name="TRACE"/>
+    </log>
+  </sequence>
+</template>

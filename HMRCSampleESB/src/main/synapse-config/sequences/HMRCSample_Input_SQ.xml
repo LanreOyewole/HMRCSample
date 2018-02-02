@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="HMRCSample_Input_SQ" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full">
+        <property name="HMRCSample_Input_SQ_LOG___________________________####" value="1111"/>
+    </log>
+    <filter xmlns:ns="http://org.apache.synapse/xsd" xpath="boolean(get-property('Action'))">
+        <then>
+            <property name="ResponseFormat" scope="default" type="STRING" value="XML"/>
+            <property expression="$body/tns:Sample/tns:Town" name="City" scope="default" type="STRING" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://uk.gov.hmrc/Canon"/>
+            <sequence description="Validate and Transform" key="HMRCSample_Validate_SQ"/>
+        </then>
+        <else>
+            <property name="ResponseFormat" scope="default" type="STRING" value="JSON"/>
+            <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+            <property expression="json-eval($.Sample.City)" name="City" scope="default" type="STRING"/>
+            <payloadFactory media-type="xml">
+                <format>
+                    <tns:Weather xmlns:tns="http://uk.gov.hmrc/Canon">
+                        <tns:Summary>$1 - Warm, Dry and Sunny</tns:Summary>
+                    </tns:Weather>
+                </format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:City" xmlns:tns="http://uk.gov.hmrc/Canon"/>
+                </args>
+            </payloadFactory>
+        </else>
+    </filter>
+    <log level="full">
+        <property name="HMRCSample_Input_SQ_LOG___________________________####" value="2222"/>
+    </log>
+    <loopback description="Turnaround"/>
+</sequence>

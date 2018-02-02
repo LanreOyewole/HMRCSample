@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="HMRCSample_PX" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target faultSequence="HMRCSampleFault_SQ" inSequence="HMRCSample_Input_SQ" outSequence="HMRCSample_Output_SQ"/>
+</proxy>

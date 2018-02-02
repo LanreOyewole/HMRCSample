@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="HMRCSampleFault_SQ" statistics="enable" trace="enable" xmlns="http://ws.apache.org/ns/synapse">
+    <log category="ERROR" level="full">
+        <property name="HMRCSampleFault_SQ_LOG___________________________####" value="0000"/>
+        <property expression="$ctx:ERROR_CODE" name="HMRCSampleFault_SQ_LOG_ECode_______________________####" xmlns:ns="http://org.apache.synapse/xsd"/>
+        <property expression="$ctx:ERROR_MESSAGE" name="HMRCSampleFault_SQ_LOG_EMsge_______________________####" xmlns:ns="http://org.apache.synapse/xsd"/>
+        <property expression="$ctx:ERROR_DETAIL" name="HMRCSampleFault_SQ_LOG_EDetl_______________________####" xmlns:ns="http://org.apache.synapse/xsd"/>
+        <property expression="$ctx:ERROR_EXCEPTION" name="HMRCSampleFault_SQ_LOG_EXcpt_______________________####" xmlns:ns="http://org.apache.synapse/xsd"/>
+    </log>
+</sequence>

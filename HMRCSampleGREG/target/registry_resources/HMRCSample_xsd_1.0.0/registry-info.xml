@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <item>
+        <file>HMRCSample.xsd</file>
+        <path>/_system/config/HMRCSample/xsd</path>
+        <mediaType>application/x-xsd+xml</mediaType>
+    </item>
+</resources>

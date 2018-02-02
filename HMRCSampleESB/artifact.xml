@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="HMRCSample_AP" groupId="uk.gov.hmrc.HMRCSampleESB.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/HMRCSample_AP.xml</file>
+    </artifact>
+    <artifact name="HMRCSample_PX" groupId="uk.gov.hmrc.HMRCSampleESB.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/HMRCSample_PX.xml</file>
+    </artifact>
+    <artifact name="HMRCSampleFault_SQ" groupId="uk.gov.hmrc.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/HMRCSampleFault_SQ.xml</file>
+    </artifact>
+    <artifact name="HMRCSample_Output_SQ" groupId="uk.gov.hmrc.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/HMRCSample_Output_SQ.xml</file>
+    </artifact>
+    <artifact name="HMRCSample_Validate_SQ" groupId="uk.gov.hmrc.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/HMRCSample_Validate_SQ.xml</file>
+    </artifact>
+    <artifact name="HMRCSample_Input_SQ" groupId="uk.gov.hmrc.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/HMRCSample_Input_SQ.xml</file>
+    </artifact>
+</artifacts>

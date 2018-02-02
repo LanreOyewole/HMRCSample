@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/HMRCSample_AP" name="HMRCSample_AP" xmlns="http://ws.apache.org/ns/synapse">
+    <resource faultSequence="HMRCSampleFault_SQ" inSequence="HMRCSample_Input_SQ" methods="POST" outSequence="HMRCSample_Output_SQ" uri-template="/*"/>
+</api>

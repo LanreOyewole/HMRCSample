@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://uk.gov.hmrc/Canon" xmlns:tns="http://uk.gov.hmrc/Canon" elementFormDefault="qualified">
+  <xsd:element name="Sample">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Town" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

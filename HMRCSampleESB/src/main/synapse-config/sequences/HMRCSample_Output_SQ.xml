@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="HMRCSample_Output_SQ" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full">
+        <property name="HMRCSample_Output_SQ_LOG___________________________####" value="3333"/>
+    </log>
+    <filter xmlns:ns="http://org.apache.synapse/xsd" xpath="get-property('ResponseFormat')">
+        <then>
+            <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+        </then>
+        <else>
+            <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+        </else>
+    </filter>
+    <respond/>
+</sequence>

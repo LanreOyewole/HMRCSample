@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="HMRCSample_xsd" groupId="uk.gov.hmrc.resource" version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+        <item>
+            <file>HMRCSample.xsd</file>
+            <path>/_system/config/HMRCSample/xsd</path>
+            <mediaType>application/x-xsd+xml</mediaType>
+        </item>
+    </artifact>
+    <artifact name="HMRCSample_xsl" groupId="uk.gov.hmrc.resource" version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+        <item>
+            <file>HMRCSample.xsl</file>
+            <path>/_system/config/HMRCSample/xsl</path>
+            <mediaType>application/xsl+xml</mediaType>
+        </item>
+    </artifact>
+</artifacts>
