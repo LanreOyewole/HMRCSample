@@ -19,3 +19,6 @@ Content-Type: application/json
     {"City": "Lagos"}
 }
 
+http://172.16.207.1:8281/HMRC_Sample/
+Authorization: Bearer faac6ff4-4130-354a-8c8a-249bd749ea03
+
