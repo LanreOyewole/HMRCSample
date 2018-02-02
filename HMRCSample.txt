@@ -1,0 +1,21 @@
+
+http://127.0.0.1:8280/services/HMRCSample_PX
+SOAPAction: urn:mediate
+Content-Type: text/xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header/>
+   <soapenv:Body>
+     <tns:Sample xmlns:tns="http://uk.gov.hmrc/Canon">
+       <tns:Town>Lagos</tns:Town>
+     </tns:Sample>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+http://127.0.0.1:8280/HMRCSample_AP/
+Content-Type: application/json
+{
+  "Sample": 
+    {"City": "Lagos"}
+}
+

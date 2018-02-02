@@ -1,0 +1,71 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "HMRC Sample API.",
+    "version": "1.0.0",
+    "title": "HMRC_Sample",
+    "contact": {
+      "email": "lanre@net-technologies.com"
+    }
+  },
+  "host": "localhost:8280",
+  "basePath": "/HMRCSample/v1",
+  "tags": [
+    {
+      "name": "Sample",
+      "description": "Retrieve a validated and transformed payload."
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "post": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Send a payload/message for validation and transformation",
+        "description": "",
+        "operationId": "PostSample",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Message for validation and transformation",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Sample"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{\"payload\":{\"Message\":\"Success!.\"}}"
+          },
+          "500": {
+            "description": "{\"payload\":{\"Message\":\"Failure!.\"}}"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Sample": {
+      "type": "object",
+      "properties": {
+        "City": {
+          "type": "string",
+          "enum": ["London", "Paris", "New York", "Tokyo", "Lagos", "Shanghai"]
+        }
+      }
+    }
+  }
+}
